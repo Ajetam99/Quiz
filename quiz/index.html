@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>QUIZ</title>
+    <link rel="icon" href="images/brain.png">
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="questions.json"></script> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span id="mode" class="slider round" onclick="enterDarkMode()"></span>
+            </label>
+        </div>
+        <div class="row h-100 justify-content-center">
+            <div class="my-auto">
+                <form id="formName" name="myForm" action="javascript:document.getElementById('submitName').click();">
+                    <input type="text" class="form-control" id="name" placeholder="Name" autocomplete="off">
+                    <div class="spacing"></div>
+                    <div class="d-flex justify-content-center">
+                        <button id="submitName" type="button" class="btn btn-primary" onclick="submited()">SUBMIT</button>
+                    </div>
+                </form>
+
+                <div id="rules" style="display: none;">
+                    <h4 id="rules0">RULES</h4>
+                    <p id="rules1">
+                        1. There will be 10 questions with each carrying 1 point for the correct and 0 for the incorrect answer. <br>
+                        2. Some will have 4 possible answers under the question and for others you will need to write the answer yourself. <br>
+                        3. You have 20s for each answer. <br>
+                        4. Once a game you can use the help to change the question. <br>
+                        
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="start" type="button" class="btn btn-primary" onclick="start()" style="display: none;">
+                        <h1 id="start_text">START</h1>
+                </button>
+                </div>
+
+                <div id="questions" style="display: none;">
+                    <div class="d-flex justify-content-between">
+                        <div class="my-col1 elements"><p id="numOfQuestion"></p>/10</div>
+                        <div id="pointsBox" class="my-col1 elements">points: &nbsp; <p id="points">0</p></div>
+                    </div>
+                    <div class="d-flex row">
+                        <div id="question" class="my-col2 elements col-sm-12">Question</div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <div class="sl1" onclick="mixQuestion()"><img id="hlp" class="help" data-toggle="tooltip" title="Zamena pitanja"
+                                src="images/arrows.png" alt=""></div>
+                        <div id="timer" class="timer elements"></div>
+                        
+                    </div>
+                    <div class="row">
+                        <div id="textAnswer" class="my-col2 elements col-sm-12"> 
+                            <form id="formAnswer" name="FormAns" action="javascript:document.getElementById('answerButton').click();">
+                                <input type="text" class="my-form1" id="answerInput" autocomplete="off">
+                                <button id="answerButton" type="button" class="btn btn-primary" onclick="textAnswer()" style="display: none;">SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="answers12" class="row">
+                        <div id="answer1" class="my-col3 elements col-sm-6" onclick="answered(this)" onmouseover="darkenAnswer(this)" onmouseout="backAnswer(this)">
+                            Answer 1</div>
+                        <div id="answer2" class="my-col3 elements col-sm-6" onclick="answered(this)" onmouseover="darkenAnswer(this)" onmouseout="backAnswer(this)">
+                            Answer 2</div>
+                    </div>
+                    <div id="answers34" class="row">
+                        <div id="answer3" class="my-col3 elements col-sm-6" onclick="answered(this)" onmouseover="darkenAnswer(this)" onmouseout="backAnswer(this)">
+                            Answer 3</div>
+                        <div id="answer4" class="my-col3 elements col-sm-6" onclick="answered(this)" onmouseover="darkenAnswer(this)" onmouseout="backAnswer(this)">
+                            Answer 4</div>
+                    </div>
+                    <div class="spacing1"></div>
+                    <div class="d-flex row flex-nowrap">
+                        <div class="my-col4 elements skp col-6" onclick="nextQuestion()" onmouseover="darkenAnswer(this)" onmouseout="backAnswer(this)">
+                            SKIP</div>
+                        <div class="my-col4 elements ext col-6" onclick="endGame()" onmouseover="darkenAnswer(this)" onmouseout="backAnswer(this)">
+                            GIVE UP</div>
+                    </div>
+                </div>
+                <div id="endScreen" class="endResult" style="display: none;">
+                    <span id="congrats" class="endResultText"></span>
+                    <span id="playerName" class="endResultText"></span>
+                    <span id="numberOfPts" class="endResultText"></span>
+                    <span id="pts" class="endResultText"></span><br><br>
+                </div>
+                
+                <div id="leaderboard" class="" style="display: none;">
+                    <h3 id="leaders">LEADERBOARD</h3>
+                    <ul class="list-group lb">
+                        <li id="user1" class="list-group-item odd">1.&nbsp;
+                            <span id="u1"></span>
+                            <span id="result1" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user2" class="list-group-item even">2.&nbsp;
+                            <span id="u2"></span>
+                            <span id="result2" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user3" class="list-group-item odd">3.&nbsp;
+                            <span id="u3"></span>
+                            <span id="result3" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user4" class="list-group-item even">4.&nbsp;
+                            <span id="u4"></span>
+                            <span id="result4" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user5" class="list-group-item odd">5.&nbsp;
+                            <span id="u5"></span>
+                            <span id="result5" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user6" class="list-group-item even">6.&nbsp;
+                            <span id="u6"></span>
+                            <span id="result6" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user7" class="list-group-item odd">7.&nbsp;
+                            <span id="u7"></span>
+                            <span id="result7" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user8" class="list-group-item even">8.&nbsp;
+                            <span id="u8"></span>
+                            <span id="result8" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user9" class="list-group-item odd">9.&nbsp;
+                            <span id="u9"></span>
+                            <span id="result9" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                        <li id="user10" class="list-group-item even">10.&nbsp;
+                            <span id="u10"></span>
+                            <span id="result10" class="badge badge-primary badge-pill result">0</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="spacing"></div>
+                <div class="d-flex justify-content-center" style="display: none;">
+                    <button id="toLeaderboard" type="button" onclick="showLeaderboard()" style="display: none;">LEADERBOARD</button>
+                    <button id="startAgain" type="button" onclick="window.location.reload();" style="display: none;">PLAY AGAIN</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,162 @@
+[
+    {
+        "question":"Which country has the longest coastline?",
+        "answers":["Canada","Indonesia","Norway","Grece"]
+    },
+    {
+        "question":"In what year was the first-ever Wimbledon Championship held?",
+        "answers":["1877","1893","1922","1903"]
+    },
+    {
+        "question":"What does “HTTP” stand for?",
+        "answers":["HyperText Transfer Protocol","HybridText Technology Protocol","HybridText Transfer Protocol","HyperText Technology Protocol"]
+    },
+    {
+        "question":"What part of the atom has no electric charge?",
+        "answers":["Neutron","Electron","Proton","Photon"]
+    },
+    {
+        "question":"Which animal can be seen on the Porsche logo?",
+        "answers":["Horse","Bull","Wolf","Cheetah"]
+    },
+    {
+        "question":"Which country produces the most coffee in the world?",
+        "answers":["Brazil","Vietnam","Colombia","Indonesia"]
+    },
+    {
+        "question":"What is your body’s largest organ?",
+        "answers":["Skin","Colon","Lungs","Brain"]
+    },
+    {
+        "question":"Oktoberfest in Germany is celebrated with what drink?",
+        "answers":["Beer","Wine","Whiskey","Hot Chocolate"]
+    },
+    {
+        "question":"Which country did AC/DC originate in?",
+        "answers":["Australia","England","America","Ireland"]
+    },
+    {
+        "question":"What animal is on Lacoste's logo?",
+        "answers":["Crocodile","Horse","Puma","Frog"]
+    },
+    {
+        "question":"“Adventure of Sherlock Holmes” was written by which writer?",
+        "answers":["Arthur Conan Doyle","JK Rowling","Stephen King","Mark Twain"]
+    },
+    {
+        "question":"How many films did Sean Connery play James Bond in?",
+        "answers":["7","3","5","1"]
+    },
+    {
+        "question":"Who played Wolverine?",
+        "answers":["Hugh Jackman","Christian Bale","Jared Leto","Chris Evans"]
+    },
+    {
+        "question":"How long is the gestation period of an African elephant?",
+        "answers":["22 months","9 months","14 months","18 months"]
+    },
+    {
+        "question":"How many stripes does Adidas have?",
+        "answers":["3","2","4","5"]
+    },
+    {
+        "question":"How many Pyramids of Giza were made?",
+        "answers":["3","2","4","5"]
+    },
+    {
+        "question":"What was the name of the Egyptian God of the Sun?",
+        "answers":["Ra","Osiris","Re","Anubis"]
+    },
+    {
+        "question":"The video game “Happy Feet” features what animals?",
+        "answers":["Penguins","Cats","Dogs","Goats"]
+    },
+    {
+        "question":"Where does Buddhism fall in a ranking of the world’s largest religion?",
+        "answers":["5.","4.","3.","1."]
+    },
+    {
+        "question":"What is the tallest building in the world?",
+        "answers":["Burj Khalifa","Shanghai Tower","Taipei 101","Empire State Building"]
+    },
+    {
+        "question":"How many NBA titles did Michael Jordan win?",
+        "answers":["6","6","six"]
+    },
+    {
+        "question":"How many bytes are in a kilobyte?",
+        "answers":["1024","1024","1024"]
+    },
+    {
+        "question":"What is the symbol of gold in the periodic table of elements?",
+        "answers":["Au","Au","Au"]
+    },
+    {
+        "question":"What car manifactured by Zastava was imported to American market?",
+        "answers":["Yugo","Yugo Koral","Koral"]
+    },
+    {
+        "question":"Which country invented tea?",
+        "answers":["China","China","China"]
+    },
+    {
+        "question":"Which organ has four chambers?",
+        "answers":["heart","heart","the heart"]
+    },
+    {
+        "question":"What is the name of Batman's sidekick?",
+        "answers":["Robin","Robin","Robin"]
+    },
+    {
+        "question":"What is the name of the world’s longest river?",
+        "answers":["Nile","Nile","the Nile"]
+    },
+    {
+        "question":"Mahatma Gandi’s birthday is a national holiday in which country?",
+        "answers":["India","India","India"]
+    },
+    {
+        "question":"What is the name of the song with the most views on YouTube?",
+        "answers":["Despacito","Despacito","Despacito"]
+    },
+    {
+        "question":"The fashion designer, Gianni Versace, came from which country?",
+        "answers":["Italy","Italy","Italy"]
+    },
+    {
+        "question":"How many Lord of the Rings films are there?",
+        "answers":["3","3","3"]
+    },
+    {
+        "question":"Which popular TV show featured house Targaryen and Stark?",
+        "answers":["Game Of Thrones","GOT","Game Of Thrones"]
+    },
+    {
+        "question":"How many NBA championships do the Boston Celtics have?",
+        "answers":["17","17","seventeen"]
+    },
+    {
+        "question":"How many legs do spiders have?",
+        "answers":["8","8","eight"]
+    },
+    {
+        "question":"In what year did Steve Jobs die?",
+        "answers":["2011","2011","2011"]
+    },
+    {
+        "question":"In which year World War I end?",
+        "answers":["1918","1918","1918"]
+    },
+    {
+        "question":"Thor was the son of which God?",
+        "answers":["Odin","Odin","Odin"]
+    },
+    {
+        "question":"How many cards are there in a standard deck of cards?",
+        "answers":["52","52","fifty-two"]
+    },
+    {
+        "question":"How many main characters are there in a popular TV show Seinfeld?",
+        "answers":["4","4","four"]
+    }
+]
